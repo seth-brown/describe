@@ -13,8 +13,9 @@ To install `describe`, follow these steps:
 
 	* On a Mac:  
 	`$ brew install haskell-platform`
-	* On Linux:  
-	`$ sudo apt-get install ghc ghc-prof cabal-install`
+
+	* On Linux (Ubuntu):  
+    `$ sudo apt-get install haskell-platform`
 
 2. After successful installation, run the following commands to install the approporiate dependencies:  
 
@@ -32,13 +33,13 @@ To install `describe`, follow these steps:
 
 5. Test that describe is working:
 
-	`$ echo "1\n2\n3\n4" | describe`
+	`$ echo "1\n2\n3\n4" | ./describe`
 
 ### Usage:
 
 `describe` accepts numerical data in column form, i.e. delimited by newline characters. 
 
-As an example consider the following data file with two columns of comma seperated values:
+As an example, consider the following data file with two columns of comma seperated values:
 
 ```
 1e-10,3
@@ -48,7 +49,7 @@ As an example consider the following data file with two columns of comma seperat
 1e3,5
 ```
 
-To analyze the first column:
+To analyze the first column of data:
 
 `$ cut -f1 -d"," | describe | column -t`
 
@@ -72,6 +73,6 @@ Skewness  :  1.5000
 Entropy   :  1.9219
 ```
 
-Further information on how to work with rows and multiple columns can be found [in this blog post][1]
+Further information on how to work with rows and multiple columns can be found [in this blog post][1]:
 
-[1]: http://www.drbunsen.org/explorations-in-unix.html#describe
+[1]: http://www.drbunsen.org/explorations-in-unix/#describe
